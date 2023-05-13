@@ -12,22 +12,21 @@ export const App = () => {
 	const GOOD = 'good'
 	const BAD = 'bad'
 	const NEUTRAL = 'neutral'
-
 	const KEYS = [GOOD, NEUTRAL, BAD];
 
 	const onLeaveFeedback = (e) => {
 		const name = e.target.name;
 
 		switch (name) {
-			case 'good':
+			case GOOD:
 				setGood(s => s + 1)
 				break
 
-			case 'neutral':
+			case NEUTRAL:
 				setNeutral(s => s + 1)
 				break
 
-			case 'bad':
+			case BAD:
 				setBad(s => s + 1)
 				break
 
@@ -49,7 +48,6 @@ export const App = () => {
 
 		return positivePercentage;
 	}
-
 
 	const totalFeedback = countTotalFeedback();
 	const positivePercentage = countPositiveFeedbackPercentage();
