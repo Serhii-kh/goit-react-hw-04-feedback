@@ -9,6 +9,12 @@ export const App = () => {
 	const [neutral, setNeutral] = useState(0)
 	const [bad, setBad] = useState(0)
 
+	const GOOD = 'good'
+	const BAD = 'bad'
+	const NEUTRAL = 'neutral'
+
+	const KEYS = [GOOD, NEUTRAL, BAD];
+
 	const onLeaveFeedback = (e) => {
 		const name = e.target.name;
 
@@ -44,11 +50,9 @@ export const App = () => {
 		return positivePercentage;
 	}
 
-	const KEYS = [useState];
+
 	const totalFeedback = countTotalFeedback();
 	const positivePercentage = countPositiveFeedbackPercentage();
-
-	console.log(KEYS)
 
 	return (
 		<>
