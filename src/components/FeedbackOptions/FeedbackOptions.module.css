@@ -1,0 +1,25 @@
+.feedback__wrapper {
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+button {
+  min-width: 60px;
+  min-height: 30px;
+
+  background-color: #fff;
+
+  border: 2px solid lightgray;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+

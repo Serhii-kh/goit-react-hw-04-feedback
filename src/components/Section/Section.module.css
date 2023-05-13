@@ -1,0 +1,15 @@
+.section {
+/* display: flex;
+gap: 10px; */
+
+
+	max-width: 500px;
+  margin: 15px auto 0px auto;
+	padding: 5px;
+	outline: 1px solid lightgray;
+}
+
+.section__title {
+	font-size: 16px;
+  margin-bottom: 15px;
+}
