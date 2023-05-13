@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
@@ -34,22 +34,12 @@ export const App = () => {
 		}
 	};
 
+	const countTotalFeedback = () => good + bad + neutral;
 
-	const countTotalFeedback = () => {
-		const totalFeedback = good + bad + neutral;
-
-		return totalFeedback;
-	}
-
-	const countPositiveFeedbackPercentage = () => {
-		const positivePercentage = Math.round(
-			(good / countTotalFeedback()) * 100
-		);
-
-		return positivePercentage;
-	}
+	const countPositiveFeedbackPercentage = () => Math.round((good / countTotalFeedback()) * 100)
 
 	const totalFeedback = countTotalFeedback();
+	
 	const positivePercentage = countPositiveFeedbackPercentage();
 
 	return (
