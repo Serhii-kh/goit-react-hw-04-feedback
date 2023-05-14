@@ -16,7 +16,7 @@ export const App = () => {
 	const KEYS = [GOOD, NEUTRAL, BAD];
 
 	const onLeaveFeedback = (e) => {
-		const name = e.target.name;
+		const {name} = e.target;
 
 		switch (name) {
 			case GOOD:
