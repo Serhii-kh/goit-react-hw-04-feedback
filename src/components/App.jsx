@@ -10,8 +10,9 @@ export const App = () => {
 	const [bad, setBad] = useState(0)
 
 	const GOOD = 'Good'
-	const BAD = 'Bad'
 	const NEUTRAL = 'Neutral'
+	const BAD = 'Bad'
+
 	const KEYS = [GOOD, NEUTRAL, BAD];
 
 	const onLeaveFeedback = (e) => {
@@ -39,7 +40,7 @@ export const App = () => {
 	const countPositiveFeedbackPercentage = () => Math.round((good / countTotalFeedback()) * 100)
 
 	const totalFeedback = countTotalFeedback();
-	
+
 	const positivePercentage = countPositiveFeedbackPercentage();
 
 	return (
