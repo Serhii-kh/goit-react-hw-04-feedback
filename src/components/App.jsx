@@ -9,9 +9,9 @@ export const App = () => {
 	const [neutral, setNeutral] = useState(0)
 	const [bad, setBad] = useState(0)
 
-	const GOOD = 'good'
-	const BAD = 'bad'
-	const NEUTRAL = 'neutral'
+	const GOOD = 'Good'
+	const BAD = 'Bad'
+	const NEUTRAL = 'Neutral'
 	const KEYS = [GOOD, NEUTRAL, BAD];
 
 	const onLeaveFeedback = (e) => {
@@ -60,7 +60,7 @@ export const App = () => {
 						positivePercentage={positivePercentage} />
 				</Section>
 			) : (
-				<Notification message={'There is no feedback'} />
+				<Notification message={'There is no feedback :('} />
 			)}
 		</>
 	);
