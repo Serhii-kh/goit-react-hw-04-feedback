@@ -18,21 +18,9 @@ export const App = () => {
 	const onLeaveFeedback = (e) => {
 		const {name} = e.target;
 
-		switch (name) {
-			case GOOD:
-				setGood(s => s + 1)
-				break
-
-			case NEUTRAL:
-				setNeutral(s => s + 1)
-				break
-
-			case BAD:
-				setBad(s => s + 1)
-				break
-
-			default: return
-		}
+		if (name === GOOD) setGood(s => s + 1)
+		if (name === NEUTRAL) setNeutral(s => s + 1)
+		if (name === BAD) setBad(s => s + 1)
 	};
 
 	const countTotalFeedback = () => good + bad + neutral;
